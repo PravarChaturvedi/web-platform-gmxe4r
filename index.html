@@ -1,0 +1,73 @@
+<html>
+  <head>
+    
+    <title>Super Over</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+  </head>
+  <body>
+  <section>
+  <div class="score" id="team1">
+    <h1>IND</h1>
+    <div id="India_over" class="balls">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      
+    </div>
+    <div class="scoreboard">
+    <span id="score-team1">0</span>
+    <span>/</span>
+    <span id="wickets-team1">0</span>
+    </div>
+    <div class="score" id="team2">
+    <h1>PAK</h1>
+    <div id="team2-superover" class="balls">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="scoreboard">
+    <span id="score-team2">0</span>
+    <span>/</span>
+    <span id="wickets-team2">0</span>
+    </div>
+    <div class="score" id="team3">
+    
+  </div>
+  <section id="buttons">
+  <img
+    class="button"
+    id="strike"
+    src="https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/so-strike-button.png"
+  />
+  <img
+        class="button"
+        id="reset"
+        src="https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/so-reset-button.png"
+      />
+      <script>
+      const strikeButton = document.getElementById("strike");
+      const resetButton = document.getElementById("reset");
+
+      strikeButton.addEventListener("click", () => {
+        const score1 = Math.floor(Math.random() * 7); // Generate random score between 0 and 6
+        const score2 = Math.floor(Math.random() * 7); // Generate random score between 0 and 6
+        document.getElementById("score-team1").textContent = parseInt(document.getElementById("score-team1").textContent) + score1;
+        document.getElementById("score-team2").textContent = parseInt(document.getElementById("score-team2").textContent) + score2;
+      });
+
+      resetButton.addEventListener("click", () => {
+        document.getElementById("score-team1").textContent = "0";
+        document.getElementById("score-team2").textContent = "0";
+      });
+    </script>
+
+
+</html>
